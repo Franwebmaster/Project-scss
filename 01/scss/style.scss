@@ -28,6 +28,29 @@ $font-primary: monospace;
     }
 }
 
+//Condicionais
+@mixin type-1($size) {
+    font-family: monospace;
+    @if $size == 16 {
+        font-size: 1em;
+    }
+    @else if $size == 18 {
+        font-size: 1.25em;
+    }
+}
+
+@mixin shadow($type) {
+    @if $type == 1 {
+        box-shadow: 5px 5px 5px 0  #000;
+    }
+    @else if $type == 2 {
+        box-shadow: 15px 15px 15px 0 #333;
+    }
+    @else if $type == 3 {
+        box-shadow: 25px 25px 25px 0 #666;
+    }
+}
+
 section {
 	max-width: 600px;
     margin: 0 auto;
@@ -41,10 +64,7 @@ section {
         @include separator(pink, 200px);
     }
     p {
-        font: {
-            size: 1.2em;
-            family: $font-primary;
-        }
+        @include type-1(18);
         line-height: 1.4;
         max-width: 400px;
     }
@@ -71,6 +91,7 @@ ul {
             display: block;
             padding: 20px;
             text-decoration: none;
+            @include type-1(16);
             &:hover, &.active {
                 color: purple;
             }
