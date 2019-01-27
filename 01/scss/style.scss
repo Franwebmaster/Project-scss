@@ -51,6 +51,15 @@ $font-primary: monospace;
     }
 }
 
+//Loop
+$medias: facebook twitter instagram;
+
+@each $i in $medias {
+    .rede-#{$i} {
+        background-image: url('../img/#{$i}.png');
+    }
+}
+
 section {
 	max-width: 600px;
     margin: 0 auto;
@@ -75,7 +84,7 @@ section {
         border-radius: 4px;
         text-align: center;
         background: $cor-primary;
-        color: white;
+        color: lighten(white, 20%);
         text-decoration: none;
         text-transform: uppercase;
         font-family: $font-primary;
@@ -93,7 +102,7 @@ ul {
             text-decoration: none;
             @include type-1(16);
             &:hover, &.active {
-                color: purple;
+                color: darken(#84E, 50%);
             }
         }
     }

@@ -7,6 +7,18 @@ a {
   color: black;
 }
 
+.rede-facebook {
+  background-image: url("../img/facebook.png");
+}
+
+.rede-twitter {
+  background-image: url("../img/twitter.png");
+}
+
+.rede-instagram {
+  background-image: url("../img/instagram.png");
+}
+
 section {
   max-width: 600px;
   margin: 0 auto;
@@ -67,5 +79,5 @@ ul li a {
 }
 
 ul li a:hover, ul li a.active {
-  color: purple;
+  color: #15042f;
 }
