@@ -13,8 +13,20 @@ section {
 }
 
 .container h1 {
-  color: purple;
+  color: #84E;
   font-family: monospace;
+  font-size: 4em;
+  font-weight: bold;
+  font-family: monospace;
+  line-height: 1;
+}
+
+.container h1::after {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 4px;
+  background: pink;
 }
 
 .container p {
@@ -30,7 +42,7 @@ section {
   padding: 10px;
   border-radius: 4px;
   text-align: center;
-  background: purple;
+  background: #84E;
   color: white;
   text-decoration: none;
   text-transform: uppercase;

@@ -4,8 +4,29 @@
 
 //Variaveis
 $preto: #999;
-$cor-primary: purple;
+$cor-primary: #84E;
 $font-primary: monospace;
+
+//Mixin
+@mixin title-large {
+    font: {
+        size: 4em;
+        weight: bold;
+        family: monospace;
+    }
+    line-height: 1;
+}
+
+//Mixin com argumentos
+@mixin separator($color: #84E, $width: 300px) {
+    &::after {
+        content: '';
+        display: block;
+        width: $width;
+        height: 4px;
+        background: $color;
+    }
+}
 
 section {
 	max-width: 600px;
@@ -16,6 +37,8 @@ section {
     h1 {
         color: $cor-primary;
         font-family: $font-primary;
+        @include title-large;
+        @include separator(pink, 200px);
     }
     p {
         font: {
